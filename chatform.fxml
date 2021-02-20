@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="558.0" prefWidth="524.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ChatController">
+    <children>
+        <ListView fx:id="output_list" layoutX="164.0" layoutY="3.0" opacity="0.83" prefHeight="510.0" prefWidth="357.0" style="-fx-border-color: #666666;" />
+        <Button fx:id="send" layoutX="449.0" layoutY="518.0" mnemonicParsing="false" onAction="#sendMessage" prefHeight="35.0" prefWidth="71.0" style="-fx-border-color: #666666;" text="Send">
+         <font>
+            <Font name="Palatino Linotype" size="15.0" />
+         </font></Button>
+        <TextField fx:id="input_field" layoutX="164.0" layoutY="518.0" onKeyPressed="#keyEvent" prefHeight="35.0" prefWidth="279.0" style="-fx-border-color: #666666;">
+            <font>
+                <Font size="11.0" />
+            </font>
+        </TextField>
+      <Pane layoutX="7.0" layoutY="3.0" opacity="0.83" prefHeight="552.0" prefWidth="150.0" style="-fx-background-color: #005567;">
+         <children>
+            <ImageView fitHeight="102.0" fitWidth="94.0" layoutX="34.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@avatar_blank.png" />
+               </image></ImageView>
+            <TextField fx:id="userNameField" layoutX="14.0" layoutY="128.0" prefHeight="25.0" prefWidth="123.0" style="-fx-border-color: #666666;" />
+            <ListView fx:id="usersOnline" layoutX="14.0" layoutY="196.0" prefHeight="311.0" prefWidth="123.0" style="-fx-border-color: #666666;" />
+            <Label layoutX="17.0" layoutY="161.0" prefHeight="27.0" prefWidth="123.0" text="Users Online:" textFill="WHITE" />
+            <Button id="exit" layoutX="15.0" layoutY="513.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="121.0" text="Exit">
+               <font>
+                  <Font name="Palatino Linotype" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>
